@@ -1,0 +1,20 @@
+import java.util.*;
+
+class User {
+  private String username;
+  private Stack<String> activities;
+
+  public User(String username) {
+    this.username = username;
+    this.activities = new Stack<>();
+  }
+  public void addActivity(String activity) {
+    activities.push(activity);
+  }
+  public void displayActivities() {
+    System.out.println("Activities for User " + username + ":");
+    for (String activity : activities) {
+      System.out.println(activity);
+    }
+  }
+}
